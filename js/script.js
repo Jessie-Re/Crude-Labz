@@ -343,4 +343,23 @@ if (orderForm) {
 }
 
 renderCart();
+const sendBtn = document.getElementById("sendOrderBtn");
+const modal = document.getElementById("warningModal");
+const cancelBtn = document.getElementById("cancelWarning");
+const continueBtn = document.getElementById("continueWarning");
+
+sendBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+});
+
+cancelBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+continueBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+
+    // Submit the form
+    sendBtn.closest("form").submit();
+});
 
