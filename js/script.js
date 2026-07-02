@@ -11,6 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     });
 });
 
+
 const productPrices = {
     'Reta 10mg': 65,
     'Reta 20mg': 85,
@@ -54,6 +55,7 @@ const cartNotification = document.getElementById('cart-notification');
 const MIN_ORDER_TOTAL = 10;
 let currentPromo = '';
 let cart = {};
+let pendingMailto = "";
 
 function saveCart() {
     try {
@@ -317,9 +319,9 @@ if (orderForm) {
             'I agree to the terms and conditions.'
         ].join('\n');
 
-        const mailto = `mailto:CrudeLabz@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailto;
+      pendingMailto = `mailto:CrudeLabz@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+modal.style.display = "flex";
         if (fallbackSummary && fallbackSummaryText) {
             fallbackSummaryText.value = body;
             fallbackSummary.classList.remove('hidden');
@@ -359,7 +361,8 @@ cancelBtn.addEventListener("click", () => {
 continueBtn.addEventListener("click", () => {
     modal.style.display = "none";
 
-    // Submit the form
-    sendBtn.closest("form").submit();
+    if (pendingMailto) {
+        window.location.href = pendingMailto;
+    }
 });
 
