@@ -43,6 +43,27 @@ img {
     margin: 0 auto;
 }
 
+.cart-notification {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    background: #111111;
+    color: #ffffff;
+    padding: 0.85rem 1rem;
+    border-radius: 999px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cart-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 header {
     position: sticky;
     top: 0;

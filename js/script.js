@@ -49,6 +49,7 @@ const formError = document.getElementById('form-error');
 const fallbackSummary = document.getElementById('fallback-summary');
 const fallbackSummaryText = document.getElementById('fallback-summary-text');
 const copySummaryButton = document.getElementById('copy-summary');
+const cartNotification = document.getElementById('cart-notification');
 
 const MIN_ORDER_TOTAL = 10;
 let currentPromo = '';
@@ -158,6 +159,18 @@ function renderCart() {
     saveCart();
 }
 
+function showCartNotification(message) {
+    if (!cartNotification) return;
+
+    cartNotification.textContent = message;
+    cartNotification.classList.add('show');
+
+    clearTimeout(showCartNotification.timeoutId);
+    showCartNotification.timeoutId = setTimeout(() => {
+        cartNotification.classList.remove('show');
+    }, 1800);
+}
+
 function addToCart(product) {
     if (!productPrices[product]) return;
     if (!cart[product]) {
@@ -165,6 +178,7 @@ function addToCart(product) {
     }
     cart[product].quantity += 1;
     renderCart();
+    showCartNotification(`${product} added to cart`);
 }
 
 function changeCartQuantity(product, delta) {
