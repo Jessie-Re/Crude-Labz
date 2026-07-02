@@ -207,7 +207,9 @@
                     <label for="order-notes">Order notes</label>
                     <textarea id="order-notes" name="orderNotes" rows="4" placeholder="Additional shipping notes or custom request"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Send order summary</button>
+               <button type="button" id="sendOrderBtn" class="btn btn-primary">
+    Send order summary
+</button>
                 <p class="form-help">When submitted, this form opens an email compose window so you can send your order summary directly to the sales address.</p>
                 <div id="fallback-summary" class="fallback-summary hidden">
                     <p>If your desktop mail client is not configured, copy this order summary into your email manually:</p>
@@ -241,8 +243,25 @@
                         <img class="payment-card-image" src="images/crude.jpeg" alt="Crude Labz" />
                         <div class="payment-name">Venmo</div>
                     </a>
-                </div>
-            </div>
+              <div id="warningModal" class="warning-modal">
+    <div class="warning-content">
+        <h2>Important Notice</h2>
+
+        <p>
+            Please review and acknowledge the information below before continuing.
+        </p>
+
+        <div class="warning-buttons">
+            <button id="cancelWarning" class="btn">
+                Cancel
+            </button>
+
+            <button id="continueWarning" class="btn btn-primary">
+                I Understand
+            </button>
+        </div>
+    </div>
+</div>
         </div>
     </footer>
 
