@@ -346,20 +346,26 @@ modal.style.display = "flex";
 
 renderCart();
 const sendBtn = document.getElementById("sendOrderBtn");
-const modal = document.getElementById("warningModal");
-const cancelBtn = document.getElementById("cancelWarning");
-const continueBtn = document.getElementById("continueWarning");
+const warningModal = document.getElementById("warningModal");
+const cancelWarning = document.getElementById("cancelWarning");
+const continueWarning = document.getElementById("continueWarning");
+const orderForm = document.getElementById("order-form");
 
-sendBtn.addEventListener("click", () => {
-    modal.style.display = "flex";
+// Show popup
+sendBtn.addEventListener("click", function () {
+    warningModal.style.display = "flex";
 });
 
-cancelBtn.addEventListener("click", () => {
-    modal.style.display = "none";
+// Hide popup
+cancelWarning.addEventListener("click", function () {
+    warningModal.style.display = "none";
 });
 
-continueBtn.addEventListener("click", () => {
-    modal.style.display = "none";
+// Submit form only after customer agrees
+continueWarning.addEventListener("click", function () {
+    warningModal.style.display = "none";
+    orderForm.requestSubmit();
+});
 
     if (pendingMailto) {
         window.location.href = pendingMailto;
