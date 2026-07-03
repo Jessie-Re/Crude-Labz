@@ -579,4 +579,23 @@ select:focus {
     gap:15px;
     margin-top:25px;
 }
+    .official-banner {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 2px solid #caa24b;
+}
+
+.official-banner strong {
+    color: #caa24b;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.official-banner span {
+    opacity: 0.9;
+}
 }
