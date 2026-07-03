@@ -49,11 +49,15 @@ const formError = document.getElementById('form-error');
 const fallbackSummary = document.getElementById('fallback-summary');
 const fallbackSummaryText = document.getElementById('fallback-summary-text');
 const copySummaryButton = document.getElementById('copy-summary');
+const warningModal = document.getElementById('warningModal');
+const cancelWarningButton = document.getElementById('cancelWarning');
+const continueWarningButton = document.getElementById('continueWarning');
 const cartNotification = document.getElementById('cart-notification');
 
 const MIN_ORDER_TOTAL = 10;
 let currentPromo = '';
 let cart = {};
+let confirmedWarning = false;
 
 function saveCart() {
     try {
@@ -243,6 +247,18 @@ if (applyPromoBtn) {
     });
 }
 
+if (warningModal && cancelWarningButton && continueWarningButton) {
+    cancelWarningButton.addEventListener('click', () => {
+        warningModal.classList.add('hidden');
+    });
+
+    continueWarningButton.addEventListener('click', () => {
+        confirmedWarning = true;
+        warningModal.classList.add('hidden');
+        orderForm.requestSubmit();
+    });
+}
+
 if (orderForm) {
     function displayError(message) {
         if (formError) {
@@ -258,6 +274,14 @@ if (orderForm) {
 
     orderForm.addEventListener('submit', (event) => {
         event.preventDefault();
+
+        if (!confirmedWarning) {
+            if (warningModal) {
+                warningModal.classList.remove('hidden');
+            }
+            return;
+        }
+
         clearError();
         if (fallbackSummary) {
             fallbackSummary.classList.add('hidden');
