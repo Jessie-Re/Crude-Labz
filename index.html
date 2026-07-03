@@ -32,7 +32,7 @@
         <section class="hero" id="top">
             <div class="hero-copy">
                 <p class="eyebrow">Trusted peptide supply for research and discovery</p>
-                <h1>Fast fulfillment, Current COAs avaliable and dependable quality.</h1>
+                <h1>Fast fulfillment, Current COA'S avaliable and dependable quality.</h1>
                 <p class="hero-text">Crude Labz provides curated peptide inventory with premium sourcing, transparent support, and secure ordering for research professionals.</p>
                 <div class="btn-row">
                     <a class="btn btn-primary" href="#products">Shop products</a>
@@ -197,7 +197,7 @@
                 </div>
                 <p class="form-error" id="form-error"></p>
                 <div class="order-summary-panel">
-                    <div class="summary-note">Free shipping with orders over $100</div>
+                    <div class="summary-note">Free sipping with orders over $100</div>
                     <div class="summary-row"><span>Subtotal</span><span id="order-subtotal">$0.00</span></div>
                     <div class="summary-row"><span>Shipping</span><span id="order-shipping">$0.00</span></div>
                     <div class="summary-row discount-row"><span>Discount</span><span id="order-discount">-$0.00</span></div>
@@ -207,23 +207,20 @@
                     <label for="order-notes">Order notes</label>
                     <textarea id="order-notes" name="orderNotes" rows="4" placeholder="Additional shipping notes or custom request"></textarea>
                 </div>
-                   <div class="payment-methods order-payment-methods">
+                <div class="payment-methods order-payment-methods">
                     <h3>Payment methods</h3>
                     <div class="payment-grid">
                         <a href="https://cash.app/$Crudelabz?qr=1" target="_blank" rel="noreferrer" class="payment-card">
-                            <img class="payment-card-image" src="images/original-F63DFC08-8F24-4AC9-A6CD-EA4AA13B6C94.jpeg" alt="Crude Labz" />
+                            <img class="payment-card-image" src="./original-F63DFC08-8F24-4AC9-A6CD-EA4AA13B6C94.jpeg" alt="Cash App" />
                             <div class="payment-name">Cash App</div>
                         </a>
-                        
                         <a href="https://account.venmo.com/u/Crudelabz" target="_blank" rel="noreferrer" class="payment-card">
-                            <img class="payment-card-image" src="images/processed-EA918F63-5D46-43DA-A227-299DE9F0D1BA.jpeg" alt="Crude Labz" />
+                            <img class="payment-card-image" src="./processed-EA918F63-5D46-43DA-A227-299DE9F0D1BA.jpeg" alt="Venmo" />
                             <div class="payment-name">Venmo</div>
                         </a>
                     </div>
                 </div>
-           <button type="button" id="sendOrderBtn" class="btn btn-primary">
-    Send Order Summary
-</button>
+                <button type="submit" class="btn btn-primary">Send order summary</button>
                 <p class="form-help">When submitted, this form opens an email compose window so you can send your order summary directly to the sales address.</p>
                 <div id="fallback-summary" class="fallback-summary hidden">
                     <p>If your desktop mail client is not configured, copy this order summary into your email manually:</p>
@@ -232,7 +229,6 @@
                 </div>
             </form>
         </section>
-        
     </main>
 
     <footer id="contact">
@@ -243,52 +239,32 @@
                 <p>Phone: <a href="tel:+4322579060">(432) 257-9060</a></p>
                 <p>Open daily for order inquiries and product availability.</p>
             </div>
-         
-                 
-           
-    </div>
-</div>
             <div class="official-banner">
-    <strong>✔ Official Crude Labz Website</strong>
-    <span>
-        This is the only official Crude Labz website. We do not authorize any other websites, social media accounts, or sellers unless explicitly linked from this website. If you encounter an impersonator, please contact us immediately.
-    </span>
-</div>
+                <strong>✔ Official Crude Labz Website</strong>
+                <span>
+                    This is the only official Crude Labz website. We do not authorize any other websites, social media accounts, or sellers unless explicitly linked from this website. If you encounter an impersonator, please contact us immediately.
+                </span>
+            </div>
             <div class="footer-card">
-    <h3>Follow Us</h3>
-    <p>
-        Stay updated with new products, restocks, and announcements.
-    </p>
-
-    <a
-        href="https://www.instagram.com/crudelabz?igsh=MjBhenF2cGtpbXV2"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="instagram-link"
-    >
-        📷 Follow @crudelabz on Instagram
-    </a>
-</div>
+                <h3>Follow Us</h3>
+                <p>Stay updated with new products, restocks, and announcements.</p>
+                <a href="https://www.instagram.com/crudelabz?igsh=MjBhenF2cGtpbXV2" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                    📷 Follow @crudelabz on Instagram
+                </a>
+            </div>
         </div>
     </footer>
-       <div id="warningModal" class="warning-modal">
-    <div class="warning-content">
-        <h2>Important Notice</h2>
 
-        <p>
-            Please acknowledge payment is required to confirm all orders .
-            Orders are not considered confirmed until payment has been received. Please include first and last name on payment note via cashapp/venmo.
-        </p>
-
-        <div class="warning-buttons">
-            <button id="cancelWarning" class="btn">
-                Cancel
-            </button>
-
-            <button id="continueWarning" class="btn btn-primary">
-                I Understand
-            </button>
+    <div id="warningModal" class="warning-modal hidden">
+        <div class="warning-content">
+            <h2>Important Notice</h2>
+            <p>Please acknowledge payment is required to confirm all orders. Orders are not considered confirmed until payment has been received. Please include first and last name on payment note via Cash App or Venmo.</p>
+            <div class="warning-buttons">
+                <button id="cancelWarning" class="btn">Cancel</button>
+                <button id="continueWarning" class="btn btn-primary">I Understand</button>
+            </div>
         </div>
+    </div>
 
     <script src="./js/script.js"></script>
 </body>

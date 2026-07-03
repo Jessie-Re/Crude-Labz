@@ -11,7 +11,6 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     });
 });
 
-
 const productPrices = {
     'Reta 10mg': 65,
     'Reta 20mg': 85,
@@ -55,7 +54,6 @@ const cartNotification = document.getElementById('cart-notification');
 const MIN_ORDER_TOTAL = 10;
 let currentPromo = '';
 let cart = {};
-let pendingMailto = "";
 
 function saveCart() {
     try {
@@ -319,9 +317,9 @@ if (orderForm) {
             'I agree to the terms and conditions.'
         ].join('\n');
 
-      pendingMailto = `mailto:CrudeLabz@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const mailto = `mailto:CrudeLabz@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
 
-modal.style.display = "flex";
         if (fallbackSummary && fallbackSummaryText) {
             fallbackSummaryText.value = body;
             fallbackSummary.classList.remove('hidden');
@@ -345,30 +343,4 @@ modal.style.display = "flex";
 }
 
 renderCart();
-const sendBtn = document.getElementById("sendOrderBtn");
-const warningModal = document.getElementById("warningModal");
-const cancelWarning = document.getElementById("cancelWarning");
-const continueWarning = document.getElementById("continueWarning");
-const orderForm = document.getElementById("order-form");
-
-// Show popup
-sendBtn.addEventListener("click", function () {
-    warningModal.style.display = "flex";
-});
-
-// Hide popup
-cancelWarning.addEventListener("click", function () {
-    warningModal.style.display = "none";
-});
-
-// Submit form only after customer agrees
-continueWarning.addEventListener("click", function () {
-    warningModal.style.display = "none";
-    orderForm.requestSubmit();
-});
-
-    if (pendingMailto) {
-        window.location.href = pendingMailto;
-    }
-});
 
