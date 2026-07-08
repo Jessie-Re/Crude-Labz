@@ -289,14 +289,6 @@ header {
     margin: 0;
     min-height: 3rem;
 }
-.card p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.card p br {
-    margin-bottom: 4px;
-}
 
 .info-grid {
     display: grid;
