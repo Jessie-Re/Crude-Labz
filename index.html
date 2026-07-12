@@ -109,7 +109,7 @@
                 <article class="card">
                     <span class="tag">Sale</span>
                     <h3>Tesa 10mg</h3>
-                    <p class="product-description">hospira recommended as well.</p>
+                    <p class="product-description">eBAC recommended as well.</p>
                     <div class="price">$60</div>
                     <button type="button" class="btn btn-secondary add-cart" data-product="Tesa 10mg">Add to cart</button>
                 </article>
@@ -122,15 +122,15 @@
                 </article>
                 <article class="card">
                     <span class="tag">Sale</span>
-                    <h3>Hospira BAC 30ml</h3>
+                    <h3>eBAC 30ml</h3>
                     <p class="product-description"> for reconstitution needs.</p>
                     <div class="price">$20</div>
-                    <button type="button" class="btn btn-secondary add-cart" data-product="Hospira BAC 30ml">Add to cart</button>
+                    <button type="button" class="btn btn-secondary add-cart" data-product="eBAC 30ml">Add to cart</button>
                 </article>
                 <article class="card">
                     <span class="tag">Sale</span>
                     <h3>NAD+ 500mg</h3>
-                    <p class="product-description">hospira reccomended as well.</p>
+                    <p class="product-description">eBAC 30ml recommended as well.</p>
                     <div class="price">$50</div>
                     <button type="button" class="btn btn-secondary add-cart" data-product="NAD+ 500mg">Add to cart</button>
                 </article>
@@ -211,7 +211,7 @@
                 </div>
                 <p class="form-error" id="form-error"></p>
                 <div class="order-summary-panel">
-                    <div class="summary-note">Free sipping with orders over $100</div>
+                    <div class="summary-note">Free shipping with orders over $100</div>
                     <div class="summary-row"><span>Subtotal</span><span id="order-subtotal">$0.00</span></div>
                     <div class="summary-row"><span>Shipping</span><span id="order-shipping">$0.00</span></div>
                     <div class="summary-row discount-row"><span>Discount</span><span id="order-discount">-$0.00</span></div>
@@ -221,6 +221,18 @@
                     <label for="order-notes">Order notes</label>
                     <textarea id="order-notes" name="orderNotes" rows="4" placeholder="Additional shipping notes or custom request"></textarea>
                 </div>
+  </div>
+    </footer>
+
+    <div id="warningModal" class="warning-modal hidden">
+        <div class="warning-content">
+            <h2>Important Notice</h2>
+            <p>Please acknowledge payment is required to confirm all orders. Orders are not considered confirmed until payment has been received. Please include first and last name on payment note via Cash App or Venmo.</p>
+            <div class="warning-buttons">
+                <button id="cancelWarning" class="btn">Cancel</button>
+                <button id="continueWarning" class="btn btn-primary">I Understand</button>
+            </div>
+        </div>
                 <div class="payment-methods order-payment-methods">
                     <h3>Payment methods</h3>
                     <div class="payment-grid">
@@ -266,18 +278,7 @@
                     📷 Follow @crudelabz on Instagram
                 </a>
             </div>
-        </div>
-    </footer>
-
-    <div id="warningModal" class="warning-modal hidden">
-        <div class="warning-content">
-            <h2>Important Notice</h2>
-            <p>Please acknowledge payment is required to confirm all orders. Orders are not considered confirmed until payment has been received. Please include first and last name on payment note via Cash App or Venmo.</p>
-            <div class="warning-buttons">
-                <button id="cancelWarning" class="btn">Cancel</button>
-                <button id="continueWarning" class="btn btn-primary">I Understand</button>
-            </div>
-        </div>
+      
     </div>
 
     <script src="./js/script.js"></script>
