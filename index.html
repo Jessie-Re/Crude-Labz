@@ -246,14 +246,21 @@
                         </a>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Send order summary</button>
-                <p class="form-help">When submitted, this form opens an email compose window so you can send your order summary directly to the sales address.</p>
-                <div id="fallback-summary" class="fallback-summary hidden">
-                    <p>If your desktop mail client is not configured, copy this order summary into your email manually:</p>
-                    <textarea id="fallback-summary-text" readonly rows="8"></textarea>
-                    <button type="button" id="copy-summary" class="btn btn-secondary">Copy summary</button>
-                </div>
-            </form>
+<form id="orderForm">
+    <button type="submit" class="btn btn-primary">Send order summary</button>
+
+    <p class="form-help">
+        When submitted, this form opens an email compose window so you can send your order summary directly to the sales address.
+    </p>
+
+    <div id="fallback-summary" class="fallback-summary hidden">
+        <p>If your desktop mail client is not configured, copy this order summary into your email manually:</p>
+        <textarea id="fallback-summary-text" readonly rows="8"></textarea>
+        <button type="button" id="copy-summary" class="btn btn-secondary">
+            Copy summary
+        </button>
+    </div>
+</form>
         </section>
     </main>
 
