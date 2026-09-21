@@ -63,6 +63,31 @@ img {
     opacity: 1;
     transform: translateY(0);
 }
+.notice-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.notice-box {
+    background: white;
+    color: black;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.notice-box button {
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+}
 
 header {
     position: sticky;
